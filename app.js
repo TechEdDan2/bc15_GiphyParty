@@ -13,7 +13,7 @@ async function getGifByTerm(term) {
     try {
         const searchUrl = `http://api.giphy.com/v1/gifs/random?q=${term}&api_key=${key}`;
         const result = await axios.get(searchUrl);
-        console.log(result.data.data.url);
+        console.log(result.data.images.url);
         return result.data.data.url;
     } catch (e) {
         alert(`Your search for ${term} didn't work`);
@@ -22,12 +22,13 @@ async function getGifByTerm(term) {
 
 function newGifImg(url) {
     console.log(url);
-    $('<img>').attr('src', url).appendTo('#imgBox');
+    let $newImg = $('<img>').attr('src', url);
+    $newImg.appendTo('#imgBox');
 }
 
 searchForm.addEventListener('submit', function (e) {
     e.preventDefault();
-    const userTerm = userInput.value;
+    let userTerm = userInput.value;
     console.log(userTerm);
 
     console.log(getGifByTerm(userTerm));
