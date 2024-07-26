@@ -4,13 +4,32 @@
 <head>
   <meta charset="UTF-8">
   <title>Giphy Party!</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="author" content="DNel2">
+  <meta name="Description"
+    content="The AJAX Giphy Party application allow the user to search for a GIF and when the form is submitted, make an AJAX request to the Giphy API and return a single GIF">
 </head>
 
 <body>
 
-<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-<script src="https://unpkg.com/axios/dist/axios.js"></script>
-<script src="app.js"></script>
+  <main>
+    <h1>Giphy Party</h1>
+
+    <!-- Search Box -->
+    <form action="" id="searchform">
+      <input type="text" id="search">
+      <button>Search Giphy</button>
+    </form>
+
+    <!-- Location for GIFs -->
+    <div id="imgBox">
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.js"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>
