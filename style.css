@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background: linear-gradient(#e66465, #9198e5);
+}
+
+#imgBox {
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.imgStyle {
+    width: 300px;
+    border: 1px solid white;
+    margin: 0.5rem;
+}
+
+#delete {
+    margin-top: 0.25rem;
+}
+
+#search {
+    line-height: 1.75rem;
+}
